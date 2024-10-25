@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hxci.mahongyu.dao.BookDao">
+    <select id="query" resultType="com.hxci.mahongyu.pojo.Book">
+        select * from book
+    </select>
+    <select id="edit" resultType="com.hxci.mahongyu.pojo.Book">
+        select * from book where id=#{id}
+    </select>
+    <update id="update">
+        update book set name=#{name},price=#{price},publisher=#{publisher} where id=#{id}
+    </update>
+</mapper>
